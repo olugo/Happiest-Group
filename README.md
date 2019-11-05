@@ -1,5 +1,5 @@
 # Happiest-Group
-**Esther**, **Orlando**, **Sunny** **Raksha**, **Yutong ** 
+**Esther**, **Orlando**, **Sunny** **Raksha**, **Yutong** 
 
 Why are you interested in this field/domain? Raksha
 
