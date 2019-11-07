@@ -36,4 +36,5 @@ How many observations (rows) are in your data? **Esther**
 - The 2015 happyness rank has 158 rows. The 2016 happyness rank has 157 rows. The 2017 happyness rank has 155 rows.
 How many features (columns) are in the data? **Esther**
 - The 2015 happyness rank has 12 columns. The 2016 happyness rank has 13 columns,The 2017 happyness rank has 12 columns.
+
 What questions (from above) can be answered using the data in this dataset? **Sunny**
