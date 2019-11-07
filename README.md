@@ -26,6 +26,7 @@ What data-driven questions do you hope to answer about this domain (share at lea
 
 Where did you download the data (e.g., a web URL)? **Sunny**
 - URL: https://www.kaggle.com/unsdsn/world-happiness
+
 How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that  host the data), and who or what the data is about? **Raksha**
 
 - The data was collected through the Gallup World Poll. The data was collected 
