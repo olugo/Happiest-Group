@@ -2,7 +2,7 @@
 **Esther**, **Orlando**, **Sunny**, **Raksha**, **Yutong**
 
 Why are you interested in this field/domain? **Raksha**
-- We are interested in this field/domain because we 
+- We are interested in this field/domain because we
   wondered which country would have the most scores and rankings of happiness.
   This would help us decide if we want to go to that country in the future.
 
@@ -29,15 +29,15 @@ Where did you download the data (e.g., a web URL)? **Sunny**
 
 How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that  host the data), and who or what the data is about? **Raksha**
 
-- The data was collected through the Gallup World Poll. The data was collected 
-  by the Gallup World. The data is about the countries that rank the highest 
+- The data was collected through the Gallup World Poll. The data was collected
+  by the Gallup World. The data is about the countries that rank the highest
   in overall happiness.  
 
 How many observations (rows) are in your data? **Esther**
-- The 2015 happyness rank has 158 rows. The 2016 happyness rank has 157 rows. The 2017 happyness rank has 155 rows.
+- The 2015 happiness rank has 158 rows. The 2016 happiness rank has 157 rows. The 2017 happiness rank has 155 rows.
 
 How many features (columns) are in the data? **Esther**
-- The 2015 happyness rank has 12 columns. The 2016 happyness rank has 13 columns,The 2017 happyness rank has 12 columns.
+- The 2015 happiness rank has 12 columns. The 2016 happiness rank has 13 columns,The 2017 happiness rank has 12 columns.
 
 What questions (from above) can be answered using the data in this dataset? **Sunny**
 - All four questions from above can be answered using the data in this dataset
