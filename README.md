@@ -2,6 +2,9 @@
 **Esther**, **Orlando**, **Sunny**, **Raksha**, **Yutong**
 
 Why are you interested in this field/domain? **Raksha**
+- We are interested in this field/domain because we 
+  wondered which country would have the most scores and rankings of happiness.
+  This would help us decide if we want to go to that country in the future.
 
 What other examples of data driven project have you found related to this domain (share at least 3)? **Yutong**
 1. Project name: Happiness Index and Terrorism
@@ -24,6 +27,10 @@ What data-driven questions do you hope to answer about this domain (share at lea
 Where did you download the data (e.g., a web URL)? **Sunny**
 
 How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that  host the data), and who or what the data is about? **Raksha**
+
+- The data was collected through the Gallup World Poll. The data was collected 
+  by the Gallup World. The data is about the countries that rank the highest 
+  in overall happiness.  
 
 How many observations (rows) are in your data? **Esther**
 
