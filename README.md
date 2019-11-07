@@ -25,7 +25,7 @@ What data-driven questions do you hope to answer about this domain (share at lea
 - Does weather and/or landscape have an affect on a country's HI?
 
 Where did you download the data (e.g., a web URL)? **Sunny**
-
+- URL: https://www.kaggle.com/unsdsn/world-happiness
 How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that  host the data), and who or what the data is about? **Raksha**
 
 - The data was collected through the Gallup World Poll. The data was collected 
@@ -39,3 +39,4 @@ How many features (columns) are in the data? **Esther**
 - The 2015 happyness rank has 12 columns. The 2016 happyness rank has 13 columns,The 2017 happyness rank has 12 columns.
 
 What questions (from above) can be answered using the data in this dataset? **Sunny**
+- All four questions from above can be answered using the data in this dataset
