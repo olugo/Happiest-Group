@@ -1,18 +1,10 @@
 # Happiest-Group
 **Esther**, **Orlando**, **Sunny**, **Raksha**, **Yutong**
 
-<<<<<<< HEAD
 Why are you interested in this field/domain? 
+- We are interested in this field/domain because we wondered which country would have the most scores and rankings of happiness.This would help us decide if we want to go to that country in the future.
 
-- We are interested in this field/domain because we 
-=======
-Why are you interested in this field/domain? **Raksha**
-- We are interested in this field/domain because we
->>>>>>> 39c852a2a852fe71179abed725367002a5cf365f
-  wondered which country would have the most scores and rankings of happiness.
-  This would help us decide if we want to go to that country in the future.
-
-What other examples of data driven project have you found related to this domain (share at least 3)? 
+- What other examples of data driven project have you found related to this domain (share at least 3)? 
 
 1. Project name: Happiness Index and Terrorism
   - URL: https://www.kaggle.com/vamsikrishna/happiness-index-and-terrorism/output
@@ -35,13 +27,12 @@ Where did you download the data (e.g., a web URL)?
 
 - URL: https://www.kaggle.com/unsdsn/world-happiness
 
-How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that  host the data), and who or what the data is about?
+How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
 
 - The data was collected through the Gallup World Poll. The data was collected
   by the Gallup World. The data is about the countries that rank the highest
   in overall happiness.  
 
-<<<<<<< HEAD
 How many observations (rows) are in your data? 
 
 - The 2015 happyness rank has 158 rows. The 2016 happyness rank has 157 rows. The 2017 happyness rank has 155 rows.
@@ -53,14 +44,3 @@ How many features (columns) are in the data?
 What questions (from above) can be answered using the data in this dataset? 
 
 - All four questions from above can be answered using the data in this dataset.
-=======
-How many observations (rows) are in your data? 
-- The 2015 happiness rank has 158 rows. The 2016 happiness rank has 157 rows. The 2017 happiness rank has 155 rows.
-
-How many features (columns) are in the data? 
-- The 2015 happiness rank has 12 columns. The 2016 happiness rank has 13 columns,The 2017 happiness rank has 12 columns.
-
-What questions (from above) can be answered using the data in this dataset? 
-
-- All four questions from above can be answered using the data in this dataset
-
