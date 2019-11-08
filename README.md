@@ -48,7 +48,7 @@ How many observations (rows) are in your data?
 
 How many features (columns) are in the data? 
 
-- The 2015 happyness rank has 12 columns. The 2016 happyness rank has 13 columns,The 2017 happyness rank has 12 columns.
+- The 2015 happyness rank has 12 columns. The 2016 happyness rank has 13 columns. The 2017 happyness rank has 12 columns.
 
 - The Happiness and Alcohol Consumption dataset has 9 columns. 
 
