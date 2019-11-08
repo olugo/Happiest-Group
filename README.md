@@ -8,7 +8,7 @@ Why are you interested in this field/domain?
 - What other examples of data driven project have you found related to this domain (share at least 3)? 
 
 1. Project name: Happiness Index and Terrorism
-  - [This projkect compares happiness index with acts of terrorism and provides visualizations to faciliate making correlations.](https://www.kaggle.com/vamsikrishna/happiness-index-and-terrorism/output)
+  - [This project compares happiness index with acts of terrorism and provides visualizations to faciliate making correlations.](https://www.kaggle.com/vamsikrishna/happiness-index-and-terrorism/output)
 2. Project name: Mental Health, Happiness, Economics, Human Freedom
   - [This project compares mental health, economics, and human freedom indicators with the happiness index.](https://www.kaggle.com/rblcoder/mental-health-happiness-economics-human-freedom/comments)
 3. Project name: Analysis & Viz on World Happiness
