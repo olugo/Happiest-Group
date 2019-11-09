@@ -32,25 +32,35 @@ Where did you download the data (e.g., a web URL)?
 
 - Happiness and Alchohol Consumption: https://www.kaggle.com/marcospessotto/happiness-and-alcohol-consumption
 
+- Daily Happiness and Employee Turnover: https://www.kaggle.com/harriken/employeeturnover
+
+
 How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
 
 - The World Happiness data was collected through the Gallup World Poll. The data was collected
-  by the Gallup World. The data is about the countries that rank the highest
+  by Gallup World. The data is about the countries that rank the highest
   in overall happiness.  
   
-- The Happiness and Alchohol Consumption data was collected from a few sources: HDI is from the UN, national governments and Gallup world   poll.
+- The Happiness and Alchohol Consumption data was collected from a few sources: HDI is from the UN, national governments and Gallup world poll.
+
+- The Daily Happiness and Employee Turnover data was collected by employees that use the app made by ceo, Alex
+Rios, who is the ceo of myhappyforce.com. The dataset is about employee turnover with data about employees that churn.
 
 How many observations (rows) are in your data? 
 
-- The 2015 happyness rank has 158 rows. The 2016 happyness rank has 157 rows. The 2017 happyness rank has 155 rows.
+- The 2015 happiness rank has 158 rows. The 2016 happiness rank has 157 rows. The 2017 happiness rank has 155 rows.
 
 - The Happiness and Alcohol Consumption dataset has 122 columns. 
 
+- The Daily Happiness and Employee Turnover dataset has 199 rows.
+
 How many features (columns) are in the data? 
 
-- The 2015 happyness rank has 12 columns. The 2016 happyness rank has 13 columns. The 2017 happyness rank has 12 columns.
+- The 2015 happiness rank has 12 columns. The 2016 happiness rank has 13 columns. The 2017 happiness rank has 12 columns.
 
 - The Happiness and Alcohol Consumption dataset has 9 columns. 
+
+- The Daily Happiness and Employee dataset has 5 columns.
 
 What questions (from above) can be answered using the data in this dataset? 
 
