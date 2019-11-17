@@ -17,7 +17,16 @@ get_summary_info <- function(dataset) {
     select(Country,Happiness.Rank) %>% 
     top_n(1,Happiness.Rank) %>% pull(Country)
   
+  ret$highest_happiness_score <- dataset %>% 
+    arrange(Happiness.Score) %>% 
+    select(Happiness.Score) %>% 
+    top_n(1,Happiness.Score) %>% pull()
+  
+  ret$lowest_happiness_score <- dataset %>% 
+    arrange(-Happiness.Score) %>% 
+    select(Happiness.Score) %>% 
+    top_n(1,-Happiness.Score) %>% pull()
+  
   return (ret)
 } 
 
-c1 <- happiness_2017 %>% get_summary_info()
