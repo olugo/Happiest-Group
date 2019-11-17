@@ -1,5 +1,4 @@
 library(dplyr)
-happiness_2017 <- read.csv(file = "../data/world-happiness/2017.csv", stringsAsFactors = FALSE)
 get_summary_info <- function(dataset) {
   ret <- list()
   ret$length <- length(dataset)
