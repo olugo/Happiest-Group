@@ -43,7 +43,7 @@ ggplotly(happy_free_plot)
 This chart visualizes what the freedom score of the top ten happiest countries. Freedom score is calculated by the Cato Institute using 79 distinct indicators of personal and economic freedom. The graph shows that the happiest countries share a similiar degree of freedom that can show correlation between the freedom and happiness scores. 
 
 ```{r, echo = FALSE}
-source("scripts/Happiness VS Health.R")
+source("scripts/Happiness_VS_Health.R")
 graph_2017
 
 
