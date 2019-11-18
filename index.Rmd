@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ## Introductory Paragraph
-The World Happiness Index measures happiness based on respondent's ratings of their own lives. The report offers a way to measure people's quality of life and the effectiveness of the governments beyond gross domestic product and other economic indicators. By focusing on national well being, a country can take a more wholistic approach to improving they populace's lives.  The United Nations conducts the survey based on a ladder system by asking respondents to rate the best possible life at 10 and the worst possible life being a 0. Respondents from 155 countries are then asked to rate their own current lives on that 0 to 10 scale. 
+The World Happiness Index measures happiness based on respondent's ratings of their own lives. The report offers a way to measure people's quality of life and the effectiveness of the governments beyond gross domestic product and other economic indicators. By focusing on national well being, a country can take a more wholistic approach to improving their populace's lives. The United Nations conducts the survey based on a ladder system by asking respondents to rate the best possible life at 10 and the worst possible life being a 0. Respondents from 155 countries are then asked to rate their own current lives on that 0 to 10 scale. 
 
 ```{r }
 source("summary_info.R")
