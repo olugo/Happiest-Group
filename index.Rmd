@@ -13,12 +13,14 @@ The World Happiness Index measures happiness based on respondent's ratings of th
 
 ```{r, eval = TRUE}
 source("scripts/summary_info.R")
-dataset <- read.csv("/data/world-happiness/2017.csv",stringAsFactor = FALSE)
+dataset <- read.csv(
+  file = "data/world-happiness/2017.csv",
+  stringsAsFactors = FALSE)
 summary_list <- get_summary_info(dataset)
 ```
 ## Summary Information
 
-The World Happiness Index surveyed `r summary_list$num_row` countries. The happiest country in the world in 2017 was `r happiest_country` with a score of `r highest_happiness_score`. The unhappiest country in the world was `r unhappiest_country` with a score of `r lowest_happiness_score` 
+The World Happiness Index surveyed `r summary_list$num_row` countries. The happiest country in the world in 2017 was `r summary_list$happiest_country` with a score of `r summary_list$highest_happiness_score`. The unhappiest country in the world was `r summary_list$unhappiest_country` with a score of `r summary_list$lowest_happiness_score` 
 
 ```{r }
 source("happy_analysis.R")
