@@ -23,7 +23,7 @@ summary_list <- get_summary_info(dataset)
 The World Happiness Index surveyed `r summary_list$num_row` countries. The happiest country in the world in 2017 was `r summary_list$happiest_country` with a score of `r summary_list$highest_happiness_score`. The unhappiest country in the world was `r summary_list$unhappiest_country` with a score of `r summary_list$lowest_happiness_score` 
 
 ```{r }
-source("happy_analysis.R")
+source("scripts/happy_analysis.R")
 ```
 
 ## Including Plots
@@ -33,4 +33,12 @@ ggplotly(happy_free_plot)
 ```
 This chart visualizes what the freedom score of the top ten happiest countries. Freedom score is calculated by the Cato Institute using 79 distinct indicators of personal and economic freedom. The graph shows that the happiest countries share a similiar degree of freedom that can show correlation between the freedom and happiness scores. 
 
+```{r, echo = FALSE}
+source("scripts/Happiness VS Health.R")
+graph_2017
+
+
+```
+
+This chart was intended to show the relationship between health and happiness score in 2017. We found from the line chart that there is a positive relationship between health, measured by life expectancy,  and happiness, that is— the higher the life expectancy, the more happy they are. 
 
