@@ -11,12 +11,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Introductory Paragraph
 The World Happiness Index measures happiness based on respondent's ratings of their own lives. The report offers a way to measure people's quality of life and the effectiveness of the governments beyond gross domestic product and other economic indicators. By focusing on national well being, a country can take a more wholistic approach to improving their populace's lives. The United Nations conducts the survey based on a ladder system by asking respondents to rate the best possible life at 10 and the worst possible life being a 0. Respondents from 155 countries are then asked to rate their own current lives on that 0 to 10 scale. 
 
-```{r }
-source("summary_info.R")
+```{r, eval = TRUE}
+source("scripts/summary_info.R")
+dataset <- read.csv("/data/world-happiness/2017.csv",stringAsFactor = FALSE)
+summary_list <- get_summary_info(dataset)
 ```
 ## Summary Information
 
-The World Happiness Index surveyed `r num_row` countries. The happiest country in the world in 2017 was `r happiest_country` with a score of `r highest_happiness_score`. The unhappiest country in the world was `r unhappiest_country` with a score of `r lowest_happiness_score` 
+The World Happiness Index surveyed `r summary_list$num_row` countries. The happiest country in the world in 2017 was `r happiest_country` with a score of `r highest_happiness_score`. The unhappiest country in the world was `r unhappiest_country` with a score of `r lowest_happiness_score` 
 
 ```{r }
 source("happy_analysis.R")
