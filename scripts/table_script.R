@@ -1,4 +1,6 @@
 library(dplyr)
+#This function takes in a dataframe and constructs and returns a table
+#The data in the table are gathered from the given dataframe
 aggregate_table <- function(dataset){
   dataset %>% 
     mutate(
