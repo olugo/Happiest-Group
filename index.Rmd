@@ -57,3 +57,14 @@ graph_2017
 
 This chart was intended to show the relationship between health and happiness score in 2017. We found from the line chart that there is a positive relationship between health, measured by life expectancy,  and happiness, that is— the higher the life expectancy, the more happy they are. 
 
+
+
+```{r, echo = FALSE}
+source("scripts/scatterplot.R")
+```
+
+```{r, echo=FALSE}
+generous_vs_happiness_plot
+```
+The purpose of the scatterplot was to find the correlation between happiness rank/score and the generosity of the happiest countries. We chose to do a scatterplot because this allows for
+continuous and non-continuous variables. The plot reveals that there is some correlation between the two variables. The general correlation is that the higher the generosity is, the higher the happiness rank is as well. Note that there are a couple of outliers in the plot and it isn't linear. 
