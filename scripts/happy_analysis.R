@@ -4,7 +4,7 @@ library(ggplot2)
 library(plotly)
 
 
-happiness_data <- read.csv("../data/world-happiness/2017.csv", stringsAsFactors=FALSE)
+happiness_data <- read.csv("data/world-happiness/2017.csv", stringsAsFactors=FALSE)
 
 
 get_happiness_analysis <- function(dataset){
