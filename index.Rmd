@@ -29,6 +29,7 @@ source("scripts/table_script.R")
 table <- aggregate_table(dataset)
 kable(table)
 ```
+
 We wanted to investigate the correlations between GDP per capita and Happiness score. As a result, we grouped countries with similiar GDP per capita together and calculated the average Happiness score for all countries within each group. The results are then displayed in the table above.
 
 
@@ -39,6 +40,7 @@ happy_free_plot <- get_happiness_analysis(dataset)
 
 ```
 `r happy_free_plot`
+
 This chart visualizes what the freedom score of the top ten happiest countries. Freedom score is calculated by the Cato Institute using 79 distinct indicators of personal and economic freedom. The graph shows that the happiest countries share a similiar degree of freedom that can show correlation between the freedom and happiness scores. 
 
 ```{r, echo = FALSE, eval = TRUE}
