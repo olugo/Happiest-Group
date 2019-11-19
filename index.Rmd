@@ -30,6 +30,9 @@ table <- aggregate_table(dataset)
 kable(table)
 ```
 
+
+
+
 We wanted to investigate the correlations between GDP per capita and Happiness score. As a result, we grouped countries with similiar GDP per capita together and calculated the average Happiness score for all countries within each group. The results are then displayed in the table above.
 
 
