@@ -4,8 +4,6 @@ library(ggplot2)
 library(plotly)
 
 
-happiness_data <- read.csv("data/world-happiness/2017.csv", stringsAsFactors=FALSE)
-
 get_happiness_analysis <- function(dataset){
   top_ten <- dataset %>%
     filter(rank(desc(Happiness.Score))<=10)
@@ -29,4 +27,3 @@ get_happiness_analysis <- function(dataset){
   
   return(happy_free_plot)
 }
-
