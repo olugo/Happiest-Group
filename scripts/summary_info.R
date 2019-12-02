@@ -1,4 +1,6 @@
 library(dplyr)
+#This function takes in a dataframe and returns a list that contains 
+#information about the given dataframe
 get_summary_info <- function(dataset) {
   ret <- list()
   ret$length <- length(dataset)

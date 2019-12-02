@@ -5,13 +5,17 @@ date: "11/14/2019"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, warning = FALSE, message= FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ## Introductory Paragraph
 The World Happiness Index measures happiness based on respondent's ratings of their own lives. The report offers a way to measure people's quality of life and the effectiveness of the governments beyond gross domestic product and other economic indicators. By focusing on national well being, a country can take a more wholistic approach to improving their populace's lives. The United Nations conducts the survey based on a ladder system by asking respondents to rate the best possible life at 10 and the worst possible life being a 0. Respondents from 155 countries are then asked to rate their own current lives on that 0 to 10 scale. 
 
+<<<<<<< HEAD
 ```{r, echo=FALSE, include = FALSE, eval = TRUE}
+=======
+```{r, eval = TRUE, echo = FALSE, warning = FALSE, message= FALSE}
+>>>>>>> 886849db98db4c23bc9d53c58fad24fcf164cba7
 source("scripts/summary_info.R")
 dataset <- read.csv(
   file = "data/world-happiness/2017.csv",
@@ -23,31 +27,52 @@ summary_list <- get_summary_info(dataset)
 The World Happiness Index surveyed `r summary_list$num_row` countries. The happiest country in the world in 2017 was `r summary_list$happiest_country` with a score of `r summary_list$highest_happiness_score`. The unhappiest country in the world was `r summary_list$unhappiest_country` with a score of `r summary_list$lowest_happiness_score` 
 
 ## Including Table
+<<<<<<< HEAD
 ```{r, echo = FALSE, eval = TRUE}
+=======
+```{r, eval = TRUE, echo = FALSE, warning = FALSE, message= FALSE}
+>>>>>>> 886849db98db4c23bc9d53c58fad24fcf164cba7
 library(knitr)
 source("scripts/table_script.R")
 table <- aggregate_table(dataset)
 kable(table)
 ```
 
+<<<<<<< HEAD
 We wanted to investigate the correlations between GDP per capita and Happiness score. As a result, we grouped countries with similiar GDP per capita together and calculated the average Happiness score for all countries within each group. The results are then displayed in the table above.
 
 ```{r echo = FALSE, include=FALSE}
 source("scripts/happy_analysis.R")
 ```
+=======
+
+
+
+We wanted to investigate the correlations between GDP per capita and Happiness score. As a result, we grouped countries with similiar GDP per capita together and calculated the average Happiness score for all countries within each group. The results are then displayed in the table above.
+
+>>>>>>> 886849db98db4c23bc9d53c58fad24fcf164cba7
 
 ## Including Plots
-```{r, echo = FALSE}
-ggplotly(happy_free_plot)
+```{r, echo = FALSE, eval= TRUE, warning = FALSE, message= FALSE}
+source("scripts/happy_analysis.R")
+happy_free_plot <- get_happiness_analysis(dataset)
 
 ```
+`r happy_free_plot`
+
 This chart visualizes what the freedom score of the top ten happiest countries. Freedom score is calculated by the Cato Institute using 79 distinct indicators of personal and economic freedom. The graph shows that the happiest countries share a similiar degree of freedom that can show correlation between the freedom and happiness scores. 
 
-```{r, echo = FALSE}
-source("scripts/Happiness VS Health.R")
-graph_2017
+<<<<<<< HEAD
+=======
+```{r, echo = FALSE, eval = TRUE, warning = FALSE, message= FALSE}
+library(plotly)
+source("scripts/Happiness_VS_Health.R")
+graph_2017 <- get_happiness_vs_health(dataset)
 
+graph_2017
+>>>>>>> 886849db98db4c23bc9d53c58fad24fcf164cba7
 ```
+
 
 This chart was intended to show the relationship between health and happiness score in 2017. We found from the line chart that there is a positive relationship between health, measured by life expectancy,  and happiness, that is— the higher the life expectancy, the more happy they are. 
 
@@ -55,11 +80,18 @@ This chart was intended to show the relationship between health and happiness sc
 
 ```{r, echo = FALSE}
 source("scripts/scatterplot.R")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 886849db98db4c23bc9d53c58fad24fcf164cba7
 ```
 
 ```{r, echo=FALSE}
 generous_vs_happiness_plot
 ```
 The purpose of the scatterplot was to find the correlation between happiness rank/score and the generosity of the happiest countries. We chose to do a scatterplot because this allows for
+<<<<<<< HEAD
 continuous and non-continuous variables. The plot reveals that there is some correlation between the two variables. The general correlation is that the higher the generosity is, the higher the happiness rank is as well. Note that there are a couple of outliers in the plot and it isn't linear. 
+=======
+continuous and non-continuous variables. The plot reveals that there is some correlation between the two variables. The general correlation is that the higher the generosity is, the higher the happiness rank is as well. Note that there are a couple of outliers in the plot and it isn't linear. 
+>>>>>>> 886849db98db4c23bc9d53c58fad24fcf164cba7
