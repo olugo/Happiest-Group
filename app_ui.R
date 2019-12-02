@@ -10,7 +10,7 @@ my_ui <- fluidPage(
   theme = "style.css",
   navbarPage(
     "Happiest Countries Data",
-    tabPanel("introduction",
+    tabPanel("Introduction",
              mainPanel ("Through investigating the data, we want to know that how different factors would influence people's happiness score.
                         The data we are using is called World Happiness Index. The World Happiness Index measures happiness based on respondent's ratings of their own lives.
                         The report offers a way to measure people's quality of life and the effectiveness of the governments beyond gross domestic product and other economic indicators. 
