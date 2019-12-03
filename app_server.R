@@ -5,18 +5,19 @@ library(plotly)
 library(leaflet)
 library(dplyr)
 library(geojsonio)
-
+library(countrycode)
 happiness_2017 <- read.csv(file = "./data/world-happiness/2017.csv", stringsAsFactors = FALSE)
 world_map_data <- geojson_read("./data/world-border/countries.geo.json", what = "sp")
 
 happiness_lite <- happiness_2017 %>% 
   dplyr::select(Country, Economy..GDP.per.Capita., Happiness.Score,
                 Health..Life.Expectancy., Freedom, Generosity) %>%
-  mutate(total = 5*(Economy..GDP.per.Capita. + Health..Life.Expectancy. +
-                          Freedom  + Generosity + Happiness.Score))
+  mutate(total = -8*(Economy..GDP.per.Capita. + Health..Life.Expectancy. +
+                          Freedom  + Generosity + Happiness.Score)) %>%
+  mutate(code = countrycode(happiness_2017$Country,"country.name","iso3c"))
 
 name_to_index <- function(given_country){
-  country_list <- world_map_data$name
+  country_list <- world_map_data$id
   index <- match(given_country,country_list)
   if (is.na(index))
   {
@@ -64,24 +65,24 @@ my_server <- function(input,output){
   
   get_country_name <- reactive({
     country_name <- happiness_lite %>%
-      mutate(diff = total - input$gdp*Economy..GDP.per.Capita. -
-               input$life_exp*Health..Life.Expectancy. -
-               input$freedom*Freedom -
-               input$generosity*Generosity -
+      mutate(diff = total + input$gdp*Economy..GDP.per.Capita. +
+               input$life_exp*Health..Life.Expectancy. +
+               input$freedom*Freedom +
+               input$generosity*Generosity +
                input$happy*Happiness.Score) %>%
-      dplyr::select(Country,diff) %>%
-      arrange(-diff) %>% top_n(1,diff) %>% pull(Country) %>% as.character()
+      dplyr::select(code,diff) %>%
+      arrange(-diff) %>% top_n(1,diff) %>% pull(code) %>% as.character()
   })
   
   get_country_table <- reactive({
     country_name <- happiness_lite %>%
-      mutate(diff = total - input$gdp*Economy..GDP.per.Capita. -
-               input$life_exp*Health..Life.Expectancy. -
-               input$freedom*Freedom -
-               input$generosity*Generosity -
+      mutate(diff = total + input$gdp*Economy..GDP.per.Capita. +
+               input$life_exp*Health..Life.Expectancy. +
+               input$freedom*Freedom +
+               input$generosity*Generosity +
                input$happy*Happiness.Score) %>%
       dplyr::select(Country,diff) %>%
-      arrange(-diff) %>% top_n(5,diff)
+      arrange(-diff) %>% top_n(5,diff) %>% select(Country)
   })
   
   

@@ -59,41 +59,46 @@ my_ui <- fluidPage(
             inputId = "gdp",
             label = "GDP per capita",
             min = 0,
-            max = 1.87,
-            value = 0.5,
-            round = -2
+            max = 10,
+            value = 5,
+            round = -2,
+            step = 0.1
           ),
           sliderInput(
             inputId = "life_exp",
             label = "Life expectancy",
             min = 0,
-            max = 0.95,
-            value = 0.5,
-            round = -2
+            max = 10,
+            value = 5,
+            round = -2,
+            step = 0.1
           ),
           sliderInput(
             inputId = "freedom",
             label = "Freedom score",
             min = 0,
-            max = 0.66,
-            value = 0.5,
-            round = -2
+            max = 10,
+            value = 5,
+            round = -2,
+            step = 0.1
           ),
           sliderInput(
             inputId = "generosity",
             label = "Generosity",
             min = 0,
-            max = 0.84,
-            value = 0.1,
-            round = -2
+            max = 10,
+            value = 5,
+            round = -2,
+            step = 0.1
           ),
           sliderInput(
             inputId = "happy",
             label = "Happiness",
-            min = 2.7,
-            max = 7.54,
+            min = 0,
+            max = 10,
             value = 5,
-            round = -2
+            round = -2,
+            step = 0.1
           )
         ),
         mainPanel(
@@ -101,6 +106,8 @@ my_ui <- fluidPage(
             outputId = "name"
           ),
           leafletOutput("world_map")
+          ,"This map does not highlight Singapore,
+          Bahrain, Mauritius, and Hong Kong SAR China"
         )
       )
     )
