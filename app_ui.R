@@ -110,6 +110,25 @@ my_ui <- fluidPage(
           Bahrain, Mauritius, and Hong Kong SAR China"
         )
       )
+    ),
+    tabPanel("Summary",
+             mainPanel ("We selected some factors that influence the World Happiness 
+             Index to analysis, and drew a country map to more directly present the factors 
+             and the happiness score in the corresponding countries.
+                        
+                        We first chose the generosity and happiness score and tried to find 
+             out the correlation between them. In the chart we present, we only chose 10 countries, 
+             so perhaps there is no obvious correlation that when a country has a high generosity score, 
+             it will has a high happiness score. But we can roughly see that happiness socres are higher 
+             when generosity score is higher from the trend presented (with a few exceptions).
+                        
+                        xxxx Then we chose the freedom and happiness score.xxxxx
+                        Finally we did a country map to collet and show factor GDP, life expecticy, freedom
+             generosity and happiness scores.
+                        "
+                        
+             )
     )
   )
 )
+
