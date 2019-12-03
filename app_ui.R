@@ -110,6 +110,29 @@ my_ui <- fluidPage(
           Bahrain, Mauritius, and Hong Kong SAR China"
         )
       )
-    )
+    ),
+    tabPanel(
+      "Happiness & Freedon",
+      sidebarLayout(
+        sidebarPanel(
+          radioButtons(
+            inputId = "world_map1",
+            label = "Happiness & Freedom Scores",
+            choices = list("Happiness Score", "Freedom Score"), selected = "Happiness Score",
+            inline = FALSE, width = NULL, choiceNames = NULL,
+            choiceValues = NULL),
+          
+         
+          ),
+         mainPanel(
+            plotOutput(outputId = "happy_map"),
+            helpText("These two maps visualize happiness and freedom around the world in 2017. Visualizing
+                     these two variables offers insights into correlations between happiness and freedom. The 
+                     map also clearly shows areas in the world that have a lower freedom score and also a lower
+                     happiness score. Many countries in central Africa score low on both happiness and freedom
+                     scores.")
+          )
+        )
+      )
   )
 )

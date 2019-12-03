@@ -102,5 +102,45 @@ my_server <- function(input,output){
   output$name <- renderTable({
     get_country_table()
   })
+#  A world map color-coded by each country’s overall happiness score in 2017
+  
+  worldmap <- map_data("world")
+  names(worldmap)[names(worldmap)=="region"] <- "Country"
+  worldmap$Country[worldmap$Country == "USA"] <- "United States"
+  happy_world <- happiness_2017 %>%
+    full_join(worldmap, by = "Country")
+  
+  map_theme <- theme(
+    axis.title.x = element_blank(),
+    axis.text.x  = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text.y  = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.background = element_rect(fill = "white"))
+  
+  happy_score_map <- ggplot(data = happy_world, mapping = aes(x = long, y = lat, group = group)) +
+    geom_polygon(aes(fill = `Happiness.Score`))  +
+    scale_fill_continuous(low="light blue", high="dark blue", na.value="snow2") +
+    coord_quickmap() +
+    labs(title = "Happiness Around the World - 2017") +
+    map_theme
+  
+  freedom_score_map <- ggplot(data = happy_world, mapping = aes(x = long, y = lat, group = group)) +
+    geom_polygon(aes(fill = `Freedom`))  +
+    scale_fill_continuous(low="red", high="blue", na.value="snow2") +
+    coord_quickmap() +
+    labs(title = "Freedom Around the World - 2017") +
+    map_theme
+  
+
+  output$happy_map <- renderPlot({
+    if (input$world_map1 == "Happiness Score"){
+      return(happy_score_map)
+    } else {
+      return(freedom_score_map)
+    }
+  })
+
 }
   
