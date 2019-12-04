@@ -2,6 +2,7 @@ library(dplyr)
 library(shiny)
 library(plotly)
 library(shiny)
+library(maps)
 library(leaflet)
 library(geojsonio)
 

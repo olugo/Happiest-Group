@@ -1,6 +1,7 @@
 library(shiny)
 library(leaflet)
 library(dplyr)
+library(maps)
 library(maptools)
 library(geojsonio)
 
