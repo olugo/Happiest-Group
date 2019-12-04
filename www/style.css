@@ -1,12 +1,8 @@
 body {
   background-color: #A9EBF5;
-  font-family: "Times New Roman";
+  font-family: "arial";
   font-size: 18px;
-  color: #000000;
-  
-}
-
-.navbar {
-    background-color: #EBF7F9;
-    border: 10px solid transparent;
+  color: #004466;
+  border: 8px solid;
+  border-color: #7A9BB9;
 }

@@ -8,19 +8,31 @@ library(geojsonio)
 image <- base64enc::dataURI(file="images.jpeg")
 my_ui <- fluidPage(
   theme = "style.css",
-  navbarPage(
-    "Happiest Countries Data",
+  titlePanel("Happiest Countries Data"),
+   tabsetPanel(
     tabPanel("Introduction",
-             mainPanel ("Through investigating the data, we want to know that how different factors would influence people's happiness score.
-                        The data we are using is called World Happiness Index. The World Happiness Index measures happiness based on respondent's ratings of their own lives.
-                        The report offers a way to measure people's quality of life and the effectiveness of the governments beyond gross domestic product and other economic indicators. 
-                        By focusing on national well being, a country can take a more wholistic approach to improving their populace's lives.
-                        The United Nations conducts the survey based on a ladder system by asking respondents to rate the best possible life at 10 and the worst possible life being a 0. 
-                        Respondents from 155 countries are then asked to rate their own current lives on that 0 to 10 scale."
-             ),
-             img(src = image)),
+             titlePanel(" Our Mission"),
+             mainPanel(
+              p("Hi everyone and welcome to our project! As a group, we decided to look at World Happiness data and find
+              insights from the dataset."),
+              p("The data we are using is called World Happiness Index. The World Happiness Index measures happiness based on 
+              a respondent's ratings of their own lives. The report offers a way to measure people's quality of life and the effectiveness 
+              of the governments beyond gross domestic product and other economic indicators."), 
+              p("By focusing on a nation's well being, a country can take a more holistic approach to improving people's lives.
+              The United Nations conducted the survey based on a ladder system by asking respondents to rate the best possible life at 10 
+              and the worst possible life being a 0. Respondents from 155 countries are then asked to rate their own current lives on that 0 to 10 scale."),
+              p("Our goal when creating this website was to display the insights we found and offer information on this particular subject."),
+              p("Some of the major questions we are seeking to answer are if there's any correlation between happiness scores and 
+                generosity scores, corrlation between multiple factors in a country, and finally, finding correlation between happiness scores and 
+                freedom scores."),
+              p("We hope that you'll see these insights that we have provided and will help you find the right country for you."),
+              strong("Raksha Bohra, Yutong Xie, Orlando Lugo, Sunny Li, Esther Yu, December 2019")
+              ),
+             img(src = image)
+      ),
+            
     tabPanel(
-      "Happiness Score vs. Generosity",
+      "Happiness & Generosity",
       sidebarLayout(
         sidebarPanel(
           radioButtons("rank",
@@ -40,19 +52,19 @@ my_ui <- fluidPage(
         ),
         
         mainPanel(plotlyOutput("countries"),
-                  helpText("This page displays a bar chart that compares 10 random
-                           countries with their happiness scores and their generosity 
-                           scores. The purpose of choosing these two variables is to 
-                           see if there were any correlation between them. From
-                           looking at the bar charts and comparing countries with 
-                           the two scores, it looks like there isn't much of a 
-                           correlation between a country's happiness score and 
-                           its generosity score.")
+                  p("This page displays a bar chart that compares 10 random
+                     countries with their happiness scores and their generosity 
+                     scores. The purpose of choosing these two variables is to 
+                     see if there were any correlation between them. From
+                     looking at the bar charts and comparing countries with 
+                     the two scores, it looks like there isn't much of a 
+                     correlation between a country's happiness score and 
+                     its generosity score.")
         )
       )
     ),
     tabPanel(
-      "Country Map",
+      "Comparison",
       sidebarLayout(
         sidebarPanel(
           sliderInput(
@@ -112,7 +124,7 @@ my_ui <- fluidPage(
       )
     ),
     tabPanel(
-      "Happiness & Freedon",
+      "Happiness & Freedom",
       sidebarLayout(
         sidebarPanel(
           radioButtons(
@@ -120,39 +132,41 @@ my_ui <- fluidPage(
             label = "Happiness & Freedom Scores",
             choices = list("Happiness Score", "Freedom Score"), selected = "Happiness Score",
             inline = FALSE, width = NULL, choiceNames = NULL,
-            choiceValues = NULL),
+            choiceValues = NULL
+          ),
           
          
           ),
          mainPanel(
             plotOutput(outputId = "happy_map"),
-            helpText("These two maps visualize happiness and freedom around the world in 2017. Visualizing
+            p("These two maps visualize happiness and freedom around the world in 2017. Visualizing
                      these two variables offers insights into correlations between happiness and freedom. The 
                      map also clearly shows areas in the world that have a lower freedom score and also a lower
                      happiness score. Many countries in central Africa score low on both happiness and freedom
-                     scores.")
+                     scores."
+            )
           )
         )
       ),
     
     tabPanel("Summary",
-             mainPanel ("We selected some factors that influence the World Happiness 
-             Index to analysis, and drew a country map to more directly present the factors 
-             and the happiness score in the corresponding countries.
-                        
-                        We first chose the generosity and happiness score and tried to find 
-             out the correlation between them. In the chart we present, we only chose 10 countries, 
-             so perhaps there is no obvious correlation that when a country has a high generosity score, 
-             it will has a high happiness score. But we can roughly see that happiness socres are higher 
-             when generosity score is higher from the trend presented (with a few exceptions).
-                        
-                        xxxx Then we chose the freedom and happiness score.xxxxx
-                        Finally we did a country map to collet and show factor GDP, life expecticy, freedom
-             generosity and happiness scores.
-                        "
-                        
-             )
+            titlePanel(" Takeaways"),
+             mainPanel(
+             p("In summary, the dataset our team chose is the World Happiness Report,
+             which presents multiple factors which contributes to a country's happiness."),
+             p("We determined ten countries happiness scores and their generosity. This allowed
+             us to see if there was a trend or any correlation. One takeaway
+             was that there wasn't much of a correlation or a clear trend between those two factors."),
+             p("The page next to it was about tying in all different factors and looking at them to 
+             of them to find the country which fits the criteria. The user can change the number on the scales to 
+             see which country on the map fits it. The top five countries are listed. The name on the scales
+             are Factor GDP, Life Expectancy, Freedom, Generosity, and Happiness Score. The takeaway here is to 
+             examine which five countries fit the critera on the scale of all the factors."),
+             p("The last page includes two world maps with a scale on the side to show which has the highest
+             and which has the lowest in happiness score and freedom score. 
+             Visualizing these two variables offers insights into correlations between happiness and freedom, which
+             is the main takeaway from this page.")
+            )
     )
   )
 )
-

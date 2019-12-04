@@ -6,6 +6,8 @@ library(leaflet)
 library(dplyr)
 library(geojsonio)
 library(countrycode)
+
+
 happiness_2017 <- read.csv(file = "./data/world-happiness/2017.csv", stringsAsFactors = FALSE)
 world_map_data <- geojson_read("./data/world-border/countries.geo.json", what = "sp")
 
@@ -143,4 +145,3 @@ my_server <- function(input,output){
   })
 
 }
-  
